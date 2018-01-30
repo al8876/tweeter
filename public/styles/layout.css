@@ -31,5 +31,7 @@ body {
    background: #ffffff;
    margin: 0 auto;
    position: relative;
-   top: 140px;
+   top: 70px;
+   padding: 50px;
+   z-index: 0;
  }
