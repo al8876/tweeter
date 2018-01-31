@@ -2,8 +2,7 @@
 
 function renderTweets(tweets) {
   tweets.forEach(function(tweet) {
-    $('#tweetFeed').append(createTweetElement(tweet));
-  
+    $('#tweetFeed').prepend(createTweetElement(tweet));
   });
 };
 
@@ -27,8 +26,6 @@ function createTweetElement(tweet) {
   return $tweet;
 }
 
-// renderTweets(data);
-
 // New Tweet Functions
 
 $('.new-tweet form').on('submit', function(e) {
@@ -36,9 +33,10 @@ $('.new-tweet form').on('submit', function(e) {
   e.preventDefault();
   // Get data of form
   var data = $('.new-tweet form').serialize();
-  // submit using ajax
+  // Submit using ajax
   console.log(data);
 
+  // Condition for text between char count 0 - 140 
   if ($('textarea').val() === "") {
     window.alert("Empty");
   } else if ($('textarea').val().length > 140) {
@@ -52,10 +50,12 @@ $('.new-tweet form').on('submit', function(e) {
           success: function (tweet) {
             console.log('Success :', tweet);
             renderTweets(tweet);
+            
           }
         });
       });
     });
+// Reset the form after submit
     $(this).trigger('reset');
   }
 });
