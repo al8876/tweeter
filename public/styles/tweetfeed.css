@@ -5,6 +5,8 @@
 
 .indiTweet header {
   background-color: #eee;
+  border-radius: 5px 5px 0px 0px;
+  margin-top: -0.5px;
 }
 
 .indiTweet:hover header {
@@ -25,7 +27,7 @@
 
 .indiTweet header p {
   float: right;
-  line-height: 20px;
+  line-height: 12px;
   margin-right: 10px;
   padding: 0;
 }
@@ -53,13 +55,9 @@
   float: right;
   width: 15px;
   margin: 2px;
+  right: 10px;
 }
 
 .indiTweet:hover footer img {
   opacity: 100;
-  position: relative;
-  bottom: 28px;
-  float: right;
-  width: 15px;
-  margin: 2px;
 }
