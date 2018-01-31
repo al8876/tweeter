@@ -11,7 +11,9 @@ $(document).ready(function() {
     // If input length is over 140 character, counter colour turns red
     if (input.length > maxChar) {
       $(counter).css('color', 'red');
-    }
+    } else if (input.length < maxChar || input.length === maxChar) {
+      $(counter).css('color', 'black');
+    } 
     counter.text(charLeft);
   });
 });
