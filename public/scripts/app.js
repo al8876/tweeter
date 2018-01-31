@@ -56,5 +56,6 @@ $('.new-tweet form').on('submit', function(e) {
         });
       });
     });
+    $(this).trigger('reset');
   }
 });
