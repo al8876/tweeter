@@ -44,15 +44,16 @@ $('.new-tweet form').on('submit', function(e) {
   } else if ($('textarea').val().length > 140) {
     window.alert('Too many characters');
   } else {
-    $.post('/tweets', data);
-    $(function loadTweets() {
-      $.ajax({
-        url: '/tweets',
-        method: 'GET',
-        success: function (tweet) {
-          console.log('Success :', tweet);
-          renderTweets(tweet);
-        }
+    $.post('/tweets', data).done(function(){;
+      $(function loadTweets() {
+        $.ajax({
+          url: '/tweets',
+          method: 'GET',
+          success: function (tweet) {
+            console.log('Success :', tweet);
+            renderTweets(tweet);
+          }
+        });
       });
     });
   }
