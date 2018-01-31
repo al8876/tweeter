@@ -16,6 +16,9 @@
     <!-- Tweet Composer CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Tweet Feed CSS -->
+    <link rel="stylesheet" href="/styles/tweetfeed.css" type="text/css" />
+
     <!-- Roboto Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i|Roboto:300,300i,700,700i" rel="stylesheet">
   
@@ -31,6 +34,8 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+      <!-- New Tweet Composer -->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST">
@@ -39,8 +44,32 @@
           <span class="counter">140</span>
         </form>
       </section>
+
+
+      <br>
+      <br>
+
+      <!-- Tweet Feed -->
       <section id="tweetFeed">
-        
+
+        <article class="indiTweet">
+
+          <header>
+            <img src="https://www.colourbox.com/preview/14818480-avatar-icon.jpg">
+            <h2>Alex Lee</h2>
+            <p>@alex.lee</p>
+          </header>
+
+          <p>Test tweet here inside the body</p>
+
+          <footer>
+            <p class="daysAgo">10 days ago</p>
+            <img src="http://www.emoji.co.uk/files/twitter-emojis/symbols-twitter/11076-blue-heart.png">
+            <img src="https://www.seoclerk.com/pics/want55519-1naJS01508179397.png">
+            <img src="http://www.myiconfinder.com/uploads/iconsets/256-256-b151c375bd040cedc0e717951e66b841.png">
+          </footer>
+
+        </article>
       </section>
     </main>
 
