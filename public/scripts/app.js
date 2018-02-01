@@ -8,6 +8,7 @@ $(document).ready(function(){
     });
   };
 
+
   // Parse tweet database from objects into HTML elements
 
   function createTweetElement(tweet) {
@@ -55,9 +56,9 @@ $(document).ready(function(){
 
     // Condition for text between char count 0 - 140 
     if ($('textarea').val() === "") {
-      window.alert("Empty");
+      window.alert("You need to write to compose a tweet!");
     } else if ($('textarea').val().length > 140) {
-      window.alert('Too many characters');
+      window.alert('Too many characters in your tweet');
     } else {
       $.post('/tweets', data).done(loadAndRenderTweet);
   // Reset the form after submit
@@ -65,4 +66,12 @@ $(document).ready(function(){
       $('.new-tweet .counter').text('140');
     }
   });
-})
+
+  // Compose Button Click
+  $('#nav-bar button').click(function() {
+    // $('.new-tweet').fadeToggle();
+    $('.new-tweet').slideToggle();
+  });
+
+
+});
