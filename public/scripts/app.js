@@ -69,8 +69,8 @@ $(document).ready(function(){
 
   // Compose Button Click
   $('#nav-bar button').click(function() {
-    // $('.new-tweet').fadeToggle();
-    $('.new-tweet').slideToggle();
+    $('.new-tweet').slideToggle('fast');
+    $('.new-tweet textarea').focus();
   });
 
 

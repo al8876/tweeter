@@ -35,12 +35,14 @@
   height: 45px;
   border-radius: 5px;
   line-height: 5px;
+  outline: 0;
 }
 
 #nav-bar .compose:hover {
   background-color: rgb(146, 138, 138);
   border: black;
   color: white;
+  outline: 0;
 }
 
 #nav-bar .compose i {
