@@ -30,7 +30,7 @@
   margin-top: 10px;
 }
 
-.indiTweet header p {
+.indiTweet header .handle {
   float: right;
   line-height: 12px;
   margin-right: 10px;
@@ -38,9 +38,10 @@
 }
 
 .indiTweet p {
-  height: 50px;
+  height: auto;
   padding: 15px;
-  clear: both;
+  overflow-wrap: break-word;
+  /* clear: both; */
 }
 
 .indiTweet footer {

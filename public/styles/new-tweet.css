@@ -14,8 +14,23 @@
 
 .new-tweet textarea {
   width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   height: 5em;
   padding: 5px;
+  display: block;
+  border-radius: 5px;
+  border-color: #eee;
+}
+
+.new-tweet input {
+  margin-top: 3px;
+  border-radius: 3px;
+}
+
+.new-tweet input:hover {
+  background-color: rgb(163, 158, 158);
+  color: white;
 }
 
 .new-tweet .counter {

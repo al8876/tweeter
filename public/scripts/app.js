@@ -15,8 +15,10 @@ $(document).ready(function(){
     let $header = $("<header>");
     let $avatars = $("<img>").attr("src", tweet.user.avatars.small);
     let $name = $("<h2>").text(tweet.user.name);
-    let $handle = $("<p>").text(tweet.user.handle);
+    let $handle = $("<p>").addClass('handle').text(tweet.user.handle);
     let $content = $('<p>').text(tweet.content.text); 
+    // Below is bad security one that is hacked
+    // let $content = $(`<p>${tweet.content.text}</p>`); 
     let $footer = $('<footer>');
     let $created = $('<p>').text(tweet.created_at);
     let $heart = $('<i>').addClass("fa fa-heart").attr("aria-hidden", "true");
@@ -29,6 +31,7 @@ $(document).ready(function(){
   }
 
   function loadAndRenderTweet() {
+    $('#tweetFeed').empty()
     $.ajax({
       url: '/tweets',
       method: 'GET',
@@ -59,7 +62,7 @@ $(document).ready(function(){
       $.post('/tweets', data).done(loadAndRenderTweet);
   // Reset the form after submit
       $(this).trigger('reset');
+      $('.new-tweet .counter').text('140');
     }
   });
-
 })
