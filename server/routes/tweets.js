@@ -7,6 +7,7 @@ const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
 
+  // Routes GET request to render tweets on homepage
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {
@@ -17,6 +18,7 @@ module.exports = function(DataHelpers) {
     });
   });
 
+  // Routes POST request too function saveTweet
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
@@ -40,7 +42,5 @@ module.exports = function(DataHelpers) {
       }
     });
   });
-
   return tweetsRoutes;
-
 }

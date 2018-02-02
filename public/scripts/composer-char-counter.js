@@ -17,5 +17,4 @@ $(document).ready(function() {
     }
     counter.text(charLeft);
   });
-
 });

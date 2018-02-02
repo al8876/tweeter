@@ -4,14 +4,7 @@
 module.exports = function makeDataHelpers(db) {
   return {
 
-    // Saves a tweet to `db`
-    // saveTweet: function(newTweet, callback) {
-    //   simulateDelay(() => {
-    //     db.tweets.push(newTweet);
-    //     callback(null, true);
-    //   });
-    // },
-
+    // Function to save composed tweets to MongoDB database
     saveTweet: function(newTweet, callback) {
       try {
         db.collection("tweets").insertOne(newTweet);
@@ -21,15 +14,7 @@ module.exports = function makeDataHelpers(db) {
       }
     },
 
-    // Get all tweets in `db`, sorted by newest first
-    // getTweets: function(callback) {
-    //   simulateDelay(() => {
-    //     const sortNewestFirst = (a, b) => a.created_at - b.created_at;
-
-    //     callback(null, db.tweets.sort(sortNewestFirst));
-    //   });
-    // }
-
+    // Function to retrive tweets from MongoDB and display tweets on homepage
     getTweets: function(callback) {
       db.collection("tweets").find().toArray((err, tweets) => {
         if (err) {

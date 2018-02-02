@@ -47,6 +47,7 @@ $(document).ready(function(){
     });
   }
 
+  // Render existing tweets from database on homepage load
   loadAndRenderTweet();
   
   // New Tweet Functions
