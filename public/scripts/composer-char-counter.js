@@ -1,7 +1,8 @@
 const maxChar = 140;
 
 $(document).ready(function() {
-  $('.new-tweet form textarea').on('keyup', function() {
+  // On keyboard input - change counter positive or negative
+  $('.new-tweet form textarea').on('input', function() {
     let input = $(this).val();
     let charLeft = (maxChar - input.length);
 
@@ -13,7 +14,8 @@ $(document).ready(function() {
       $(counter).css('color', 'red');
     } else if (input.length < maxChar || input.length === maxChar) {
       $(counter).css('color', 'black');
-    } 
+    }
     counter.text(charLeft);
   });
+
 });
