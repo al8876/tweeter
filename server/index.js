@@ -18,7 +18,7 @@ const MONGODB_URI = "mongodb://localhost:27017/tweeter";
 
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
-    console.error('holly shit');
+    console.error('Error with data entry');
     return;
   }
   const DataHelpers = require("./lib/data-helpers.js")(db);
