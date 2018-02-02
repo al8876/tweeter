@@ -4,7 +4,10 @@ Tweeter is a simple Twitter clone, utilizing HTML, CSS, jQuery, JS, AJAX, and Mo
 
 ## Lighthouse Labs project #2:
 
+Screen shot of homepage with tweet composer: 
 !["Screenshot of homepage with tweet composer"](https://github.com/al8876/tweeter/blob/master/docs/tweeter-compose.png?raw=true)
+
+Screen shot of closing tweet composer using compose button and view of tweet feed:
 !["Screenshot of closing tweet composer and view of tweet feed"](https://github.com/al8876/tweeter/blob/master/docs/tweeter-feed.png?raw=true)
 
 Tweets are composed by the user, and stored in a noSQL database, where they are shown in chronological order based on time created in the tweet newsfeed. 
