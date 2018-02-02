@@ -1,0 +1,55 @@
+@import "variables";
+
+#nav-bar {
+  background-color: $brand-color;
+  padding-left: 2em;
+  padding-right: 2em;
+  color: #ffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  .logo {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    margin-top: 6px;
+  }
+
+  .header {
+  float: left;
+  line-height: 90px;
+  font-size: 2em;
+  font: impact;
+  }
+
+  .nav-buttons {
+  float: right;
+  }
+
+  .compose {
+  margin-right: 5px;
+  margin-top: 24px;
+  height: 45px;
+  border-radius: 5px;
+  line-height: 5px;
+  outline: 0;
+
+    i {
+    float: left;
+    margin-right: 5px;
+    margin-top: -7px;
+    font-size: 23px;
+    }
+  }
+}
+
+#nav-bar .compose:hover {
+  background-color: rgb(146, 138, 138);
+  border: black;
+  color: white;
+  outline: 0;
+}

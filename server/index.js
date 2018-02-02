@@ -12,8 +12,8 @@ const path = require("path");
 
 // SASS middleware setup:
 app.use(nodeSassMiddleware({
-  src: path.join(__dirname, 'sass'),
-  dest: path.join(__dirname, 'public'),
+  src: path.join(__dirname, '../sass'),
+  dest: path.join(__dirname, '../public/styles'),
   debug: true,
   outputStyle: 'compressed'
 }));

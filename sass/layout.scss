@@ -1,0 +1,26 @@
+ @import "variables";
+ 
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  color: #244751;
+  background-color: $brand-background;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+ main {
+   width: 450px;
+   background: #ffffff;
+   margin: 0 auto;
+   position: relative;
+   top: 70px;
+   padding: 50px;
+   z-index: 0;
+ }

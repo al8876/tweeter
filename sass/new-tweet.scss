@@ -1,14 +1,19 @@
+@import "variables";
+
 .new-tweet {
   padding: 10px;
   box-sizing: border-box;
-  background-color: #eee;
+  background-color: $brand-background;
   margin: 0 auto;
   margin-bottom: 20px;
-  border-radius: 5px; }
-  .new-tweet h2 {
+  border-radius: 5px;
+
+  h2 {
     border-bottom: 1px solid black;
-    margin-top: 0; }
-  .new-tweet textarea {
+    margin-top: 0;
+  }
+
+  textarea {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
@@ -16,19 +21,25 @@
     padding: 5px;
     display: block;
     border-radius: 5px;
-    border-color: #eee;
-    outline-color: #2eceb6; }
-  .new-tweet input {
+    border-color: $brand-background;
+    outline-color: $brand-color;
+  }
+
+  input {
     margin-top: 3px;
     border-radius: 3px;
-    outline: 0; }
-  .new-tweet .counter {
+    outline: 0;
+  }
+
+  .counter {
     float: right;
     padding-right: 5px;
-    padding-top: 5px; }
+    padding-top: 5px;
+  }
+  
+}
 
 .new-tweet input:hover {
-  background-color: #a39e9e;
-  color: white; }
-
-/*# sourceMappingURL=new-tweet.css.map */
+  background-color: rgb(163, 158, 158);
+  color: white;
+}
