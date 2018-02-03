@@ -1,7 +1,7 @@
 "use strict";
 
 // Basic express setup:
-const PORT = 5000;
+const PORT = process.env.PORT || 8080;
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -23,7 +23,7 @@ app.use(express.static("public"));
 
 // MongoDB setup:
 const MongoClient = require("mongodb").MongoClient;
-const MONGODB_URI = "mongodb://localhost:27017/tweeter";
+const MONGODB_URI = "mongodb://heroku_3l7w49m0:bkg01ei0uofnk4nchvirbn01ue@ds223738.mlab.com:23738/heroku_3l7w49m0";
 
 // MongoDB connection set up with database:
 MongoClient.connect(MONGODB_URI, (err, db) => {
