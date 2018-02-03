@@ -19,7 +19,7 @@ $(document).ready(function(){
     let $flag = $('<i>').attr("id", "flag").addClass("fa fa-flag").attr("aria-hidden", "true");
 
     // Like counter - Displays total amount of user likes
-    let $likes = $('<p>').text(" likes").attr("id", "likeCount");
+    let $likes = $('<p>').text("0 likes").attr("id", "likeCount");
 
     // Append elements to header and footer of tweet
     $($footer).append($created, $heart, $retweet, $flag, $likes);
@@ -83,27 +83,14 @@ $(document).ready(function(){
   // Like a tweet by clicking heart icon
   $("#tweetFeed").on("click", "#heart", function(e) {
     let $heart = $(this).data("liked");
+    console.log(this);
     if (!$heart) {
       $(this).data("liked", true).addClass("userLiked");
+      $(this).parent().find($("#likeCount")).text("1 like");
     } else {
       $(this).data("liked", false).removeClass("userLiked");
+      $(this).parent().find($("#likeCount")).text("0 likes");      
     }
     console.log($(this).data());
   });
-
-
-
-
-
-
-  function likeTweet() {
-    $.ajax({
-      url: '/tweets',
-      method: 'PUT'
-    }).done(function (tweet) {
-      console.log('Success :', tweet);
-      renderTweets(tweet);
-    });
-  }
-
 });
