@@ -14,12 +14,15 @@ $(document).ready(function(){
     let $created = $('<p>').text(moment(tweet.created_at).fromNow());
 
     // Font Awesome icons (Like, Retweet, Flag) for Tweet footer
-    let $heart = $('<i>').addClass("fa fa-heart").attr("aria-hidden", "true");
-    let $retweet = $('<i>').addClass("fa fa-retweet").attr("aria-hidden", "true");
-    let $flag = $('<i>').addClass("fa fa-flag").attr("aria-hidden", "true");
+    let $heart = $('<i>').addClass("fa fa-heart").attr("aria-hidden", "true").attr("id", "heart").attr("data-liked", 0);
+    let $retweet = $('<i>').addClass("fa fa-retweet").attr("aria-hidden", "true").attr("id", "retweet");
+    let $flag = $('<i>').addClass("fa fa-flag").attr("aria-hidden", "true").attr("id", "flag");
+
+    // Like counter - Displays total amount of user likes
+    let $likes = $('<p>').text(" likes").attr("id", "likeCount");
 
     // Append elements to header and footer of tweet
-    $($footer).append($created, $heart, $retweet, $flag);
+    $($footer).append($created, $heart, $retweet, $flag, $likes);
     $($header).append($avatars, $name, $handle);
 
     // Append footer and header to tweet

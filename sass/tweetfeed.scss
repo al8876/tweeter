@@ -68,6 +68,26 @@
 
   footer i {
     opacity: 100;
-    color: $icon-blue;
+    color: grey;
   }
+}
+
+#heart:hover {
+  color: red;
+}
+
+#retweet:hover {
+  color: $icon-blue;
+}
+
+#flag:hover {
+  color: $icon-blue;
+}
+
+#likeCount {
+  position: relative;
+  bottom: 30px;
+  float: right;
+  margin: 3px;
+  right: 10px;
 }

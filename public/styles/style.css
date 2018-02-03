@@ -142,8 +142,22 @@ main {
     background-color: #d1d1d1; }
   .indiTweet:hover footer i {
     opacity: 100;
-    color: #0ecdfd; }
+    color: grey; }
 
-    test
-    
+#heart:hover {
+  color: red; }
+
+#retweet:hover {
+  color: #0ecdfd; }
+
+#flag:hover {
+  color: #0ecdfd; }
+
+#likeCount {
+  position: relative;
+  bottom: 30px;
+  float: right;
+  margin: 3px;
+  right: 10px; }
+
 /*# sourceMappingURL=style.css.map */
