@@ -14,9 +14,9 @@ $(document).ready(function(){
     let $created = $('<p>').text(moment(tweet.created_at).fromNow());
 
     // Font Awesome icons (Like, Retweet, Flag) for Tweet footer
-    let $heart = $('<i>').addClass("fa fa-heart").attr("aria-hidden", "true").attr("id", "heart").attr("data-liked", 0);
-    let $retweet = $('<i>').addClass("fa fa-retweet").attr("aria-hidden", "true").attr("id", "retweet");
-    let $flag = $('<i>').addClass("fa fa-flag").attr("aria-hidden", "true").attr("id", "flag");
+    let $heart = $('<i>').attr("id", "heart").addClass("fa fa-heart").attr("aria-hidden", "true").data("liked", false);
+    let $retweet = $('<i>').attr("id", "retweet").addClass("fa fa-retweet").attr("aria-hidden", "true");
+    let $flag = $('<i>').attr("id", "flag").addClass("fa fa-flag").attr("aria-hidden", "true");
 
     // Like counter - Displays total amount of user likes
     let $likes = $('<p>').text(" likes").attr("id", "likeCount");
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
   // Render existing tweets from database on homepage load
   loadAndRenderTweet();
-  
+
   // New Tweet Functions
   $('.new-tweet form').on('submit', function(e) {
     // Prevent the default behaviour of new page refresh
@@ -79,5 +79,31 @@ $(document).ready(function(){
     $('.new-tweet').slideToggle('fast');
     $('.new-tweet textarea').focus();
   });
+
+  // Like a tweet by clicking heart icon
+  $("#tweetFeed").on("click", "#heart", function(e) {
+    let $heart = $(this).data("liked");
+    if (!$heart) {
+      $(this).data("liked", true).addClass("userLiked");
+    } else {
+      $(this).data("liked", false).removeClass("userLiked");
+    }
+    console.log($(this).data());
+  });
+
+
+
+
+
+
+  function likeTweet() {
+    $.ajax({
+      url: '/tweets',
+      method: 'PUT'
+    }).done(function (tweet) {
+      console.log('Success :', tweet);
+      renderTweets(tweet);
+    });
+  }
 
 });

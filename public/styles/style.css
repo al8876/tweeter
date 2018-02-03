@@ -127,22 +127,29 @@ main {
       height: 15px;
       margin-left: 10px; }
     .indiTweet footer i {
-      opacity: 0;
+      opacity: 10;
+      color: grey;
       position: relative;
       bottom: 30px;
       float: right;
       width: 15px;
       margin: 3px;
       right: 10px; }
+    .indiTweet footer .userLiked {
+      color: red; }
 
 .indiTweet:hover {
   border: 1px solid grey;
   border-radius: 5px; }
   .indiTweet:hover header {
     background-color: #d1d1d1; }
-  .indiTweet:hover footer i {
-    opacity: 100;
-    color: grey; }
+
+.indiTweet:hover footer i {
+  opacity: 100;
+  color: grey; }
+
+.indiTweet:hover footer .userLiked {
+  color: red; }
 
 #heart:hover {
   color: red; }
